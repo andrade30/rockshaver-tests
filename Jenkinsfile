@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker { 
-            image 'cypress/browsers:latest' 
+            image 'cypress/browsers:node-22.13.0-chrome-132.0.6834.83-1-ff-134.0.1-edge-131.0.2903.147-1' 
             args '-u root --network rockshaver_skynet'
         }
     }
@@ -31,7 +31,7 @@ pipeline {
                 dir('web') {
                     sh 'npm install'
                     sh 'npx cypress install --force'
-                    sh 'npx cypress run'
+                    sh 'npx cypress run --browser chrome'
                 }
             }
         }
