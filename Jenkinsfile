@@ -29,7 +29,9 @@ pipeline {
         stage('Web Tests (Frontend)') {
             steps {
                 dir('web') {
-                    sh 'echo test'
+                    sh 'npm install'
+                    sh 'npx cypress install --force'
+                    sh 'npx cypress run'
                 }
             }
         }
