@@ -19,7 +19,9 @@ pipeline {
         stage('Mobile Tests') {
             steps {
                 dir('mobile') {
-                    sh 'echo test'
+                    sh 'npm install'
+                    sh 'npx cypress install --force'
+                    sh 'npx cypress run'
                 }
             }
         }
