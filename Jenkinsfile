@@ -12,7 +12,6 @@ pipeline {
                     sh 'npm install'
                     sh 'npx cypress install --force'
                     sh 'node runner.js'
-                    // sh 'npx cypress run --record --key 202bb81a-2565-4c1b-9daf-5f3ff8e98028'
                 }
             }
         }
@@ -23,7 +22,6 @@ pipeline {
                     sh 'npm install'
                     sh 'npx cypress install --force'
                     sh 'node runner.js'
-                    // sh 'npx cypress run --record --key 2f0ed264-e6d3-4af7-a0f2-0fd675222aa9'
                 }
             }
         }
@@ -34,7 +32,6 @@ pipeline {
                     sh 'npm install'
                     sh 'npx cypress install --force'
                     sh 'node runner.js'
-                    // sh 'npx cypress run --browser chrome --record --key 417026c5-d4fa-494a-9655-2ee99e86ac17'
                 }
             }
         }
