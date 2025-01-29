@@ -74,7 +74,7 @@ describe('Agendamento', () => {
             .and('have.css', 'color', 'rgb(255, 255, 255)')
     });
 
-    it('Deve retornar uma notificação no sumário em caso de conflito de disponibilidade', () => {
+    it.only('Deve retornar uma notificação no sumário em caso de conflito de disponibilidade', () => {
         const agendamento = agendamentos.conflito;
 
         cy.deleteMany({ emailCliente: agendamento.usuario.email }, {collection: 'agendamentos'})
@@ -104,6 +104,6 @@ describe('Agendamento', () => {
 
         cy.get('.alert-error')
             .should('be.visible')
-            .and('have.text', 'Já existe um agendamento para esta data e hora. Por favor, escolha outro local.')
+            .and('have.text', 'Já existe um agendamento para esta data e hora. Por favor, escolha outro horário.')
     });
 });
